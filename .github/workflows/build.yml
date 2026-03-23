@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  REGISTRY: crpi-fzs0fg8gltoy1io9.cn-hangzhou.personal.cr.aliyuncs.com
   NAMESPACE: fituer
   IMAGE_NAME: sherpa-gpu
 
