@@ -1,7 +1,7 @@
 # sherpa-onnx GPU Docker Image
 # 基于 NVIDIA CUDA 镜像，包含完整的 GPU 支持
 
-FROM nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
+FROM --platform=linux/amd64 nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
 
 WORKDIR /app
 
