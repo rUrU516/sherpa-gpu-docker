@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     python3.10 \
     python3-pip \
     wget \
+    git \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3.10 /usr/bin/python3
 
