@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     wget \
     git \
+    cmake \
+    build-essential \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3.10 /usr/bin/python3
 
