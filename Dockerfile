@@ -1,20 +1,17 @@
 # sherpa-onnx GPU Docker Image
 # 基于 NVIDIA CUDA 镜像，包含完整的 GPU 支持
 
-FROM --platform=linux/amd64 nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
+FROM --platform=linux/amd64 nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
 
 WORKDIR /app
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
-# 安装 Python 3.10 和编译工具
+# 安装 Python 3.10 和其他依赖
 RUN apt-get update && apt-get install -y \
     python3.10 \
     python3-pip \
-    git \
-    cmake \
-    build-essential \
     wget \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3.10 /usr/bin/python3
